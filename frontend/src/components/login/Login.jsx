@@ -48,7 +48,7 @@ const Login = () => {
           setUser(response);
         }
       } catch (err) {
-        toast.error("Incorrect Username/Password Combination", {position: toast.POSITION.BOTTOM_RIGHT})
+        toast.error("Incorrect Username/Password Combination", { position: toast.POSITION.BOTTOM_RIGHT })
       }
     } else {
       inputValidation()
@@ -85,8 +85,23 @@ const Login = () => {
           backgroundSize: "cover",
           backgroundPosition: "center center",
           display: { xs: "none", sm: "block" },
+          position: 'relative'
         }}
-      ></Box>
+      >
+      <Box sx={{
+        position: 'absolute',
+        width: '100%',
+        height: '100%',
+        top: 0,
+        left: 0,
+        backgroundColor: 'rgba(0,0,0,0.3)',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        flexDirection: 'column',
+      }}>
+      </Box>
+      </Box>
       <Box
         height="100%"
         display="flex"
@@ -96,6 +111,8 @@ const Login = () => {
         gap={3}
         sx={{ width: { xs: "100%", sm: "50%" } }}
       >
+        <Typography variant="h2" textAlign={'center'} fontWeight={800} letterSpacing={3} color={'accent.primary'}>Zappa Bug Tracker</Typography>
+        
         <Typography
           variant="h4"
           sx={{ borderBottom: "0.5px solid gray", width: "max-content" }}
@@ -151,7 +168,9 @@ const Login = () => {
             >
               Demo
             </Button>
+            
           </div>
+          <Typography variant="body" sx={{ alignSelf: 'center' }}>Click Demo to login or test Authorization</Typography>
         </Box>
       </Box>
     </Paper>
