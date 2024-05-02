@@ -38,13 +38,13 @@ const Sidebar = () => {
   }, [])
 
   return (
-    <Paper position="fixed" gap="20px" pb={0} sx={{ paddingBottom: 0, height: "calc(100vh - 65px)", display: {xs: 'none', sm: 'block'} }}>
+    <Paper position="fixed" gap="20px" pb={0} sx={{ paddingBottom: 0, height: "calc(100vh - 65px)", borderRadius: '0px', display: {xs: 'none', sm: 'block'}, borderRight: "1px solid rgba(255, 255, 255, 0.1)" }}>
       <List pb={0} sx={{ backgroundColor: "background.dark", height: "100%" }}>
         <StyledNavLink to="/">
           <ListItem disablePadding>
             <ListItemButton>
               <ListItemIcon>
-                <Home sx={{ color: "accent.primary" }} />
+                <Home sx={{ padding: "2px", color: mode==="dark" ? "white" : "accent.primary", borderRadius: '5px', bgcolor: mode === "dark" ? "accent.primary" : "white" }} />
               </ListItemIcon>
               <ListItemText primary="Homepage" />
             </ListItemButton>
@@ -55,7 +55,7 @@ const Sidebar = () => {
           <ListItem disablePadding>
             <ListItemButton>
               <ListItemIcon>
-                <AccountTree sx={{ color: "accent.primary" }} />
+                <AccountTree sx={{ padding: "2px", color: mode==="dark" ? "white" : "accent.primary", borderRadius: '5px', bgcolor: mode === "dark" ? "accent.primary" : "white" }} />
               </ListItemIcon>
               <ListItemText primary="Projects" />
             </ListItemButton>
@@ -66,7 +66,7 @@ const Sidebar = () => {
           <ListItem disablePadding>
             <ListItemButton>
               <ListItemIcon>
-                <BugReport sx={{ color: "accent.primary" }} />
+                <BugReport sx={{ padding: "2px", color: mode==="dark" ? "white" : "accent.primary", borderRadius: '5px', bgcolor: mode === "dark" ? "accent.primary" : "white" }} />
               </ListItemIcon>
               <ListItemText primary="Issues" />
             </ListItemButton>
@@ -77,7 +77,7 @@ const Sidebar = () => {
           <ListItem disablePadding>
             <ListItemButton>
               <ListItemIcon>
-                <Assignment sx={{ color: "accent.primary" }} />
+                <Assignment sx={{ padding: "2px", color: mode==="dark" ? "white" : "accent.primary", borderRadius: '5px', bgcolor: mode === "dark" ? "accent.primary" : "white" }} />
               </ListItemIcon>
               <ListItemText primary="Tasks" />
             </ListItemButton>
@@ -88,7 +88,7 @@ const Sidebar = () => {
           <ListItem disablePadding>
             <ListItemButton>
               <ListItemIcon>
-                <Group sx={{ color: "accent.primary" }} />
+                <Group sx={{ padding: "2px", color: mode==="dark" ? "white" : "accent.primary", borderRadius: '5px', bgcolor: mode === "dark" ? "accent.primary" : "white" }} />
               </ListItemIcon>
               <ListItemText primary="Personnel" />
             </ListItemButton>
@@ -99,7 +99,7 @@ const Sidebar = () => {
           <ListItem disablePadding>
             <ListItemButton>
               <ListItemIcon>
-                <Settings sx={{ color: "accent.primary" }} />
+                <Settings sx={{ padding: "2px", color: mode==="dark" ? "white" : "accent.primary", borderRadius: '5px', bgcolor: mode === "dark" ? "accent.primary" : "white" }} />
               </ListItemIcon>
               <ListItemText primary="Settings" />
             </ListItemButton>
@@ -110,7 +110,7 @@ const Sidebar = () => {
           <ListItem disablePadding>
             <ListItemButton>
               <ListItemIcon>
-                <AccountBox sx={{ color: "accent.primary" }} />
+                <AccountBox sx={{ padding: "2px", color: mode==="dark" ? "white" : "accent.primary", borderRadius: '5px', bgcolor: mode === "dark" ? "accent.primary" : "white" }} />
               </ListItemIcon>
               <ListItemText primary="Profile" />
             </ListItemButton>
@@ -120,7 +120,7 @@ const Sidebar = () => {
         <ListItem disablePadding>
           <ListItemButton>
             <ListItemIcon>
-              <ModeNight sx={{ color: "accent.primary" }} />
+              <ModeNight sx={{ padding: "2px", color: mode==="dark" ? "white" : "accent.primary", borderRadius: '5px', bgcolor: mode === "dark" ? "accent.primary" : "white" }} />
             </ListItemIcon>
             <Switch
               onChange={(e) => setMode(mode === "light" ? "dark" : "light")}

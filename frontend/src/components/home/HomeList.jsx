@@ -8,7 +8,7 @@ import { AppContext } from "../../context/Context";
 import { columns, mobileColumns } from "./HomeListLayout";
 
 const HomeList = () => {
-  const { bugList, projList } = useContext(AppContext);
+  const { bugList, projList, mode } = useContext(AppContext);
 
   let filteredList = bugList.filter(bug => bug.priority === 4 && bug.status === "Open")
 
@@ -35,7 +35,8 @@ const HomeList = () => {
   return (
     <Box
       height={400}
-      sx={{ "& .gridHeader": { color: "white", bgcolor: "accent.primary" } }}
+      color={mode === "dark" ? "white" : "accent.primary"}
+     
     >
       <DataGrid
         rows={filteredList}

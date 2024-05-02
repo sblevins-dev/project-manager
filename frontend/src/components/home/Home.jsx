@@ -1,4 +1,4 @@
-import { Box, Typography } from "@mui/material";
+import { Box, Divider, Typography } from "@mui/material";
 import Widget from "./Widget";
 import Chart from "./Chart";
 import HomeList from "./HomeList";
@@ -78,16 +78,21 @@ const Home = () => {
         gap={3}
         sx={{
           display: "flex",
+          justifyContent: 'space-evenly',
           scrollBehavior: "smooth",
           flexWrap: "wrap",
           gap: { xs: "20px" },
         }}
       >
         <Widget type="projects" />
+        <Divider flexItem orientation="vertical" sx={{color: "rgba(0, 0, 0, 0.1)"}} />
         <Widget type="issues" />
+        <Divider flexItem orientation="vertical"sx={{color: "rgba(0, 0, 0, 0.1)",}} />
         <Widget type="tasks" />
+        <Divider flexItem orientation="vertical" sx={{color: "rgba(0, 0, 0, 0.1)"}} />
         <Widget type="assigned" />
       </Box>
+      <Divider flexItem sx={{marginY: "20px", color: "rgba(0, 0, 0, 0.1)"}} />
       <Box
         gap={3}
         mt={3}
@@ -103,7 +108,6 @@ const Home = () => {
           bgcolor={mode === "dark" ? "background.dark" : "background.default"}
           flex={2}
           p={2}
-          boxShadow={3}
           borderRadius={1}
           sx={{
             display: "flex",
@@ -125,11 +129,11 @@ const Home = () => {
           </Typography>
           <Featured />
         </Box>
+        <Divider flexItem orientation="vertical" sx={{color: "rgba(0, 0, 0, 0.1)"}} />
         <Box
           bgcolor={mode === "dark" ? "background.dark" : "background.default"}
           flex={4}
           p={2}
-          boxShadow={3}
           borderRadius={1}
           sx={{ width: { sm: "100%", md: "678px" } }}
         >
@@ -144,12 +148,11 @@ const Home = () => {
           {Array.isArray(data) && data.length > 0 && <Chart data={data} />}
         </Box>
       </Box>
-
+      <Divider flexItem  sx={{color: "rgba(0, 0, 0, 0.1)"}} />
       <Box
         bgcolor={mode === "dark" ? "background.dark" : "background.default"}
         flex={6}
         p={2}
-        boxShadow={3}
         borderRadius={1}
         sx={{ margin: { xs: "16px 0", sm: "0" } }}
       >
@@ -159,7 +162,7 @@ const Home = () => {
           variant="h6"
           sx={{ borderBottom: "0.5px solid gray", width: "max-content" }}
         >
-          Needs Immeadiate Attention
+          Needs Immediate Attention
         </Typography>
         <HomeList />
       </Box>

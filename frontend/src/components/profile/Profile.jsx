@@ -66,7 +66,6 @@ const Profile = () => {
       bgcolor={mode === "dark" ? "background.dark" : "background.default"}
       borderRadius={1}
       gap={3}
-      boxShadow={3}
       height="100%"
     >
       <Typography

@@ -38,7 +38,7 @@ const ProjBugList = ({ state, filteredList }) => {
       sx={{
         height: filteredList.length > 0 ? 370 : 0,
         width: "100%",
-        "& .gridHeader": { color: "white", bgcolor: "accent.primary" },
+        "& .gridHeader": { color: "accent.primary", bgcolor: "transparent" },
       }}
     >
       {state !== null && filteredList !== null && filteredList.length > 0 && (

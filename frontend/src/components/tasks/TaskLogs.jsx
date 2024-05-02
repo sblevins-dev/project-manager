@@ -21,6 +21,7 @@ import { toast } from "react-toastify";
 function renderItem({ item, handleRemoveTask, formatDate }) {
   return (
     <ListItem
+    sx={{ borderBottom: "1px solid rgba(0, 0, 0, 0.1)"}}
       secondaryAction={
         <IconButton
           edge="end"

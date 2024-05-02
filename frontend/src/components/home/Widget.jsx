@@ -128,15 +128,14 @@ const Widget = ({ type }) => {
   return (
     <Box
       justifyContent="space-between"
-      flex={1}
-      boxShadow={3}
-      borderRadius={1}
+      flex={12}
       p={1}
       bgcolor={mode === "dark" ? "background.dark" : "background.default"}
       sx={{
         display: "flex",
         flexDirection: "row",
         marginLeft: "0",
+        minWidth: '120px'
       }}
     >
       <div
@@ -175,10 +174,10 @@ const Widget = ({ type }) => {
             sx={{
               fontSize: "30px",
               padding: "5px",
-              backgroundColor: "accent.primary",
+              backgroundColor: mode === "dark" ? "accent.primary" : "white",
               borderRadius: "5px",
               alignSelf: "flex-end",
-              color: "white",
+              color: mode === "dark" ? "white" : "accent.primary",
             }}
           />
         ) : type === "issues" ? (
@@ -186,10 +185,10 @@ const Widget = ({ type }) => {
             sx={{
               fontSize: "30px",
               padding: "5px",
-              backgroundColor: "accent.primary",
+              backgroundColor: mode === "dark" ? "accent.primary" : "white",
               borderRadius: "5px",
               alignSelf: "flex-end",
-              color: "white",
+              color: mode === "dark" ? "white" : "accent.primary",
             }}
           />
         ) : type === "tasks" ? (
@@ -197,10 +196,10 @@ const Widget = ({ type }) => {
             sx={{
               fontSize: "30px",
               padding: "5px",
-              backgroundColor: "accent.primary",
+              backgroundColor: mode === "dark" ? "accent.primary" : "white",
               borderRadius: "5px",
               alignSelf: "flex-end",
-              color: "white",
+              color: mode === "dark" ? "white" : "accent.primary",
             }}
           />
         ) : (
@@ -208,10 +207,10 @@ const Widget = ({ type }) => {
             sx={{
               fontSize: "30px",
               padding: "5px",
-              backgroundColor: "accent.primary",
+              backgroundColor: mode === "dark" ? "accent.primary" : "white",
               borderRadius: "5px",
               alignSelf: "flex-end",
-              color: "white",
+              color: mode === "dark" ? "white" : "accent.primary",
             }}
           />
         )}

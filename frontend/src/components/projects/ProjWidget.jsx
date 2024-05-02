@@ -99,7 +99,6 @@ const ProjWidget = ({ mode, type }) => {
     <>
       <Box
         bgcolor={mode === "dark" ? "background.dark" : "background.default"}
-        boxShadow={5}
         p={2}
         borderRadius="5px"
         width="max-content"

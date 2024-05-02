@@ -161,7 +161,6 @@ const Add = () => {
           p={3}
           gap={3}
           borderRadius={1}
-          boxShadow={3}
           display="flex"
           flexDirection="column"
           position="relative"
@@ -322,7 +321,7 @@ const Add = () => {
           >
             <Button
               onClick={handleSubmit}
-              sx={{ "&:hover": { backgroundColor: "accent.hover" } }}
+              sx={{ "&:hover": { backgroundColor: "accent.hover", color: "white" }, color: mode === "dark" ? "accent.primary" : "white", backgroundColor: mode === "dark" ? "white" : "accent.primary" }}
             >
               Post
             </Button>

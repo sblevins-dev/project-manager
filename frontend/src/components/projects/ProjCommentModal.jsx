@@ -87,7 +87,6 @@ const ProjCommentModal = ({ isCommentModalOpen, commentModalClose, state }) => {
           height: "max-content",
           width: { xs: "95%", sm: "500px" },
           bgcolor: mode === "dark" ? "#1c1c1c" : "white",
-          boxShadow: 24,
         }}
       >
         <Typography

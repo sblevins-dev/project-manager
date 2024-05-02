@@ -1,4 +1,4 @@
-import { Box, Typography } from "@mui/material";
+import { Box, Divider, Typography } from "@mui/material";
 import { DataGrid } from "@mui/x-data-grid";
 import { useContext } from "react";
 import { useEffect } from "react";
@@ -70,7 +70,6 @@ const Projects = () => {
       bgcolor={mode === "dark" ? "background.dark" : "background.default"}
       borderRadius={1}
       gap={3}
-      boxShadow={3}
       sx={{ margin: { xs: 0 }, height: "100%", minHeight: "100%", maxHeight: 'max-content' }}
     >
       <Typography
@@ -89,8 +88,9 @@ const Projects = () => {
         justifyContent="space-evenly"
         flexWrap="wrap"
         flexDirection="row"
-        width={500}
+        width={600}
         maxWidth="100%"
+        gap={1}
       >
         <span
           style={{
@@ -103,6 +103,7 @@ const Projects = () => {
           <span style={{ fontWeight: "bold" }}>{projList.length}</span>
           <label>Projects</label>
         </span>
+        <Divider flexItem orientation="vertical" sx={{color: "rgba(0, 0, 0, 0.1)"}} />
         <span
           style={{
             display: "flex",
@@ -114,6 +115,7 @@ const Projects = () => {
           <span style={{ fontWeight: "bold" }}>{data.defining}</span>
           <label>Defining</label>
         </span>
+        <Divider flexItem orientation="vertical" sx={{color: "rgba(0, 0, 0, 0.1)"}} />
         <span
           style={{
             display: "flex",
@@ -125,6 +127,7 @@ const Projects = () => {
           <span style={{ fontWeight: "bold" }}>{data.planning}</span>
           <label>Planning</label>
         </span>
+        <Divider flexItem orientation="vertical" sx={{color: "rgba(0, 0, 0, 0.1)"}} />
         <span
           style={{
             display: "flex",
@@ -136,6 +139,7 @@ const Projects = () => {
           <span style={{ fontWeight: "bold" }}>{data.designing}</span>
           <label>Desigining</label>
         </span>
+        <Divider flexItem orientation="vertical" sx={{color: "rgba(0, 0, 0, 0.1)"}} />
         <span
           style={{
             display: "flex",
@@ -147,6 +151,7 @@ const Projects = () => {
           <span style={{ fontWeight: "bold" }}>{data.building}</span>
           <label>Building</label>
         </span>
+        <Divider flexItem orientation="vertical" sx={{color: "rgba(0, 0, 0, 0.1)"}} />
         <span
           style={{
             display: "flex",
@@ -160,7 +165,8 @@ const Projects = () => {
         </span>
       </Box>
       <Box
-        sx={{ height: {xs: "70%", sm: "80%"}, width: "100%", "& .gridHeader": { color: "white", bgcolor: "accent.primary" } }}
+        sx={{ height: {xs: "70%", sm: "80%"}, width: "100%", "& .gridHeader": mode === "dark" ? { color: "white", bgcolor: "transparent" }
+        : { color: "accent.primary", bgcolor: "transparent"} }}
       >
         <DataGrid
           rows={projList}

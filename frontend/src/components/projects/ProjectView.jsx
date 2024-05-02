@@ -43,7 +43,6 @@ const ProjectView = () => {
     <>
       <Box
         p={2}
-        boxShadow={3}
         borderRadius={1}
         height="max-content"
         bgcolor={mode === "dark" ? "background.dark" : "background.default"}
@@ -84,7 +83,6 @@ const ProjectView = () => {
             pr={3}
             borderRadius="5px"
             color="white"
-            boxShadow={5}
             bgcolor={"accent.primary"}
           >
             <Typography fontWeight={200} variant="label">

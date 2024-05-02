@@ -71,14 +71,18 @@ const Navbar = () => {
 
   return (
     <AppBar
+
       position="sticky"
-      sx={{ borderRadius: "0px", boxShadow: "10px", paddingLeft: "0" }}
+      backgroundColor={"white"}
+      sx={{ borderRadius: "0px",  paddingLeft: "0", boxShadow: "none",  }}
     >
       <StyledToolbar
         disableGutters
+        
         sx={{
           backgroundColor:
-            mode === "dark" ? "background.dark" : "background.default",
+           "transparent",
+          borderBottom: "1px solid rgba(0, 0, 0, 0.1)"  
         }}
       >
         {mode === "dark" ? (

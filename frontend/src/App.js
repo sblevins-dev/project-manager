@@ -76,18 +76,37 @@ function App() {
   }, [auth, user]);
 
   const theme = createTheme({
-    root: {
-      "&.MuiDataGrid-columnHeaders": {
-        color: "#2D6675",
+    overrides: {
+      // Customize scrollbar appearance
+      MuiCssBaseline: {
+        '@global': {
+          '*::-webkit-scrollbar': {
+            display: 'none',
+            backgroundColor: 'black',
+            width: "0px" // Set height of scrollbar for horizontal scrollbar (if needed)
+          },
+          '*::-webkit-scrollbar-thumb': {
+            display: 'none',
+            color: 'transparent'     // Roundness of the scrollbar thumb
+          },
+          '*::-webkit-scrollbar-track': {
+            backgroundColor: 'transparent', // Color of the scrollbar track
+          },
+        },
       },
+    },
+    root: {
+      
+      "&::-webkit-scrollbar": {
+        display: "none"
+      }
     },
     palette: {
       mode: mode,
       primary: {
-        main: "#2D6675",
+        main: "rgb(255, 255, 255)",
       },
       background: {
-        dark: "rgba(255,255,255,.05)",
         gray: "lightgray",
         offWhite: "#f3f3f3",
       },
@@ -131,7 +150,7 @@ function App() {
           <Login />
         ) : (
           <Paper
-            sx={{ height: { xs: "100%", sm: "100%" }, overflowY: "scroll" }}
+            sx={{ height: { xs: "100%", sm: "100%" }}}
           >
             <Box sx={{ maxHeight: "100vh" }}>
               <Router>
@@ -153,14 +172,14 @@ function App() {
                   <Box
                     position="relative"
                     sx={{
-                      overflowY: "scroll",
+                      overflowY: "auto",
                       width: "100%",
                       minHeight: "100%",
                       maxHeight: { sm: "calc(100vh - 64px)" },
-                      bgcolor:
-                        mode === "dark"
-                          ? "background.primary"
-                          : "background.offWhite",
+                      // bgcolor:
+                      //   mode === "dark"
+                      //     ? "background.primary"
+                      //     : "background.offWhite",
                     }}
                   >
                     <Box

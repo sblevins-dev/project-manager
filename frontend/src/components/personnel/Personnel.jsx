@@ -10,8 +10,8 @@ const Personnel = () => {
     <Box
       p={2}
       bgcolor={mode === "dark" ? "background.dark" : "background.default"}
+      
       gap={3}
-      boxShadow={3}
       borderRadius={1}
     >
       <Typography
@@ -22,7 +22,7 @@ const Personnel = () => {
       >
         Teams
       </Typography>
-      <PersonnelList mode={mode} />
+      <PersonnelList mode={mode}  />
     </Box>
   );
 };

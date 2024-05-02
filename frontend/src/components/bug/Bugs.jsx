@@ -10,7 +10,6 @@ const Bugs = () => {
     <Box
       p={2}
       borderRadius={1}
-      boxShadow={3}
       bgcolor={mode === "dark" ? "background.dark" : "background.default"}
       height="100%"
     >
@@ -24,7 +23,7 @@ const Bugs = () => {
       </Typography>
       <Box
         sx={{
-          height: {xs: "90%", sm: "90%"}, "& .gridHeader": { color: "white", bgcolor: "accent.primary" },
+          height: {xs: "90%", sm: "90%"},
         }}
       >
         <BugsList />

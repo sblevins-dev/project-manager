@@ -91,7 +91,6 @@ export const BugCommentModal = ({
           height: "max-content",
           width: { xs: "95%", sm: "500px" },
           bgcolor: mode === "dark" ? "#1c1c1c" : "white",
-          boxShadow: 24,
         }}
       >
         <Typography
@@ -99,7 +98,7 @@ export const BugCommentModal = ({
           position="relative"
           variant="h5"
           fontWeight={400}
-          sx={{ borderBottom: "0.5px solid gray", width: "max-content" }}
+          sx={{ borderBottom: "0.5px solid rgba(0, 0, 0, 0.1)", width: "max-content" }}
         >
           Add Comment
         </Typography>

@@ -45,7 +45,6 @@ const TaskModal = ({
           height: "max-content",
           width: {xs: "95%", sm: "500px"},
           bgcolor: "background.default",
-          boxShadow: 24,
         }}
       >
         <Box

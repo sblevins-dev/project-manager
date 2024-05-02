@@ -172,7 +172,6 @@ const MyLogs = ({ bug }) => {
     <Box
       p={2}
       borderRadius={1}
-      boxShadow={3}
       bgcolor={mode === "dark" ? "background.dark" : "background.default"}
       sx={{ display: "flex", flexDirection: "column", position: "relative" }}
     >

@@ -154,14 +154,17 @@ const Row = ({ team }) => {
 const PersonnelList = ({ mode }) => {
   const { teamList } = useContext(AppContext);
   return (
-    <TableContainer sx={{ border: "0.5px solid gray" }} component={Paper}>
+    <TableContainer sx={{   }} component={Paper}>
       <Table aria-label="collapsible table">
-        <TableHead sx={{ bgcolor: "accent.primary" }}>
+        <TableHead sx={{
+        "& .gridHeader": mode === "dark" 
+        ? { color: "white", bgcolor: "transparent" }
+        : { color: "accent.primary", bgcolor: "transparent"} }}>
           <TableRow>
             <TableCell />
-            <TableCell sx={{ color: "white" }}>Team</TableCell>
+            <TableCell color={mode === "dark" ? "white" : "accent.primary"}>Team</TableCell>
             {window.innerWidth > 500 && (
-              <TableCell align="center" sx={{ color: "white" }}>
+              <TableCell align="center" color={mode === "dark" ? "white" : "accent.primary"}>
                 Employees
               </TableCell>
             )}

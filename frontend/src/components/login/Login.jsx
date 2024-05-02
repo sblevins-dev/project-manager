@@ -111,7 +111,7 @@ const Login = () => {
         gap={3}
         sx={{ width: { xs: "100%", sm: "50%" } }}
       >
-        <Typography variant="h2" textAlign={'center'} fontWeight={800} letterSpacing={3} color={'accent.primary'}>Zappa Bug Tracker</Typography>
+        <Typography variant="h2" textAlign={'center'} fontWeight={800} letterSpacing={3} color={'accent.primary'}>Zappa</Typography>
         
         <Typography
           variant="h4"

@@ -13,11 +13,11 @@ const Tasks = () => {
     <Box display="flex" gap={2} flexDirection="column">
       <Box
         borderRadius={1}
-        boxShadow={3}
         p={2}
         sx={{
           bgcolor: mode === "dark" ? "background.dark" : "background.default",
-          "& .gridHeader": { color: "white", bgcolor: "accent.primary" },
+          "& .gridHeader": mode === "dark" ? { color: "white", bgcolor: "transparent" }
+            : { color: "accent.primary", bgcolor: "transparent"},
         }}
       >
         <Typography
@@ -32,11 +32,11 @@ const Tasks = () => {
       </Box>
       <Box
         borderRadius={1}
-        boxShadow={3}
         p={2}
         sx={{
           bgcolor: mode === "dark" ? "background.dark" : "background.default",
-          "& .gridHeader": { color: "white", bgcolor: "accent.primary" },
+          "& .gridHeader": mode === "dark" ? { color: "white", bgcolor: "transparent" }
+            : { color: "accent.primary", bgcolor: "transparent"},
         }}
       >
         <Typography

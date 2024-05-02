@@ -28,7 +28,6 @@ const BugView = () => {
         flex={6}
         p={2}
         m={2}
-        boxShadow={5}
         borderRadius="5px"
         bgcolor={mode === "dark" ? "background.dark" : "background.light"}
         sx={{ display: "flex", justifyContent: "space-evenly" }}
@@ -42,7 +41,6 @@ const BugView = () => {
       <Box
         flex={6}
         p={2}
-        boxShadow={3}
         borderRadius={1}
         bgcolor={mode === "dark" ? "background.dark" : "background.default"}
         sx={{ display: "flex", justifyContent: "space-evenly" }}
