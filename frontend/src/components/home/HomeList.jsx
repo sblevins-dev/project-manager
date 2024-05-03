@@ -34,9 +34,8 @@ const HomeList = () => {
 
   return (
     <Box
-      height={400}
       color={mode === "dark" ? "white" : "accent.primary"}
-     
+      sx={{height: '500px'}}
     >
       <DataGrid
         rows={filteredList}

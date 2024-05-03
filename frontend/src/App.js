@@ -152,27 +152,27 @@ function App() {
           <Paper
             sx={{ height: { xs: "100%", sm: "100%" }}}
           >
-            <Box sx={{ maxHeight: "100vh" }}>
+            <Box sx={{ maxHeight: "100vh", height: '100%', minHeight: '100vh' }}>
               <Router>
-                <Navbar />
+                {/* <Navbar /> */}
                 <Box
                   flexDirection="row"
                   spacing={2}
                   justifyContent="space-between"
                   sx={{
+                    overflow: 'hidden',
                     display: "flex",
-                    height: "100%",
+                    height: "100vh",
                     minHeight: { xs: "calc(100vh - 56px)", sm: "100%" },
                   }}
                 >
                   <Box>
-                    <Sidebar style={{ height: "calc(100vh - 70px)" }} />
+                    <Sidebar />
                   </Box>
                   <MobileSpeedDial />
                   <Box
                     position="relative"
                     sx={{
-                      overflowY: "auto",
                       width: "100%",
                       minHeight: "100%",
                       maxHeight: { sm: "calc(100vh - 64px)" },
@@ -189,9 +189,11 @@ function App() {
                       mb={2}
                       postiton="relative"
                       sx={{
+                        overflowY: 'auto',
                         width: "100%",
                         margin: "auto",
-                        height: { xs: "100%", sm: "100%" },
+                        height: '100%',
+                        // height: { xs: "100%", sm: "100%" },
                       }}
                     >
                       <Routes>

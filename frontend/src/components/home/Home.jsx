@@ -8,7 +8,7 @@ import { AppContext } from "../../context/Context";
 import { toast } from "react-toastify";
 
 const Home = () => {
-  const { mode, bugList, formatDate } = useContext(AppContext);
+  const { mode, bugList, formatDate, user } = useContext(AppContext);
   const [data, setData] = useState([]);
   let aug = {
     critical: 0,
@@ -73,6 +73,11 @@ const Home = () => {
 
   return (
     <>
+    <Box mb={2} sx={{ display: 'flex', flexDirection: 'column', }}>
+    <Typography variant="h4" >Hey, {user.firstName}</Typography>
+      <Typography variant={"subtitle1"}>Welcome back to your dashboard! </Typography>
+    </Box>
+    <Divider flexItem sx={{color: "rgba(0, 0, 0, 0.1)", marginY: "20px"}} />
       <Box
         flex={6}
         gap={3}
@@ -84,16 +89,17 @@ const Home = () => {
           gap: { xs: "20px" },
         }}
       >
+        
         <Widget type="projects" />
-        <Divider flexItem orientation="vertical" sx={{color: "rgba(0, 0, 0, 0.1)"}} />
+        {/* <Divider flexItem orientation="vertical" sx={{color: "rgba(0, 0, 0, 0.1)"}} /> */}
         <Widget type="issues" />
-        <Divider flexItem orientation="vertical"sx={{color: "rgba(0, 0, 0, 0.1)",}} />
+        {/* <Divider flexItem orientation="vertical"sx={{color: "rgba(0, 0, 0, 0.1)",}} /> */}
         <Widget type="tasks" />
-        <Divider flexItem orientation="vertical" sx={{color: "rgba(0, 0, 0, 0.1)"}} />
+        {/* <Divider flexItem orientation="vertical" sx={{color: "rgba(0, 0, 0, 0.1)"}} /> */}
         <Widget type="assigned" />
       </Box>
       <Divider flexItem sx={{marginY: "20px", color: "rgba(0, 0, 0, 0.1)"}} />
-      <Box
+      {/* <Box
         gap={3}
         mt={3}
         mb={3}
@@ -148,11 +154,10 @@ const Home = () => {
           {Array.isArray(data) && data.length > 0 && <Chart data={data} />}
         </Box>
       </Box>
-      <Divider flexItem  sx={{color: "rgba(0, 0, 0, 0.1)"}} />
+      <Divider flexItem  sx={{color: "rgba(0, 0, 0, 0.1)"}} /> */}
       <Box
         bgcolor={mode === "dark" ? "background.dark" : "background.default"}
         flex={6}
-        p={2}
         borderRadius={1}
         sx={{ margin: { xs: "16px 0", sm: "0" } }}
       >

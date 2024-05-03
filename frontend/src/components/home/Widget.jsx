@@ -62,28 +62,28 @@ const Widget = ({ type }) => {
     case "projects":
       data = {
         title: "Projects",
-        link: "See all",
+        link: "View All",
         amt: projList.length,
       };
       break;
     case "issues":
       data = {
         title: "Issues",
-        link: "See all",
+        link: "View All",
         amt: bugList.length,
       };
       break;
     case "tasks":
       data = {
         title: "Tasks",
-        link: "See all",
+        link: "View All",
         amt: taskList.length,
       };
       break;
     case "assigned":
       data = {
         title: "Assigned",
-        link: "See all",
+        link: "View All",
         amt: assigned.length,
       };
       break;
@@ -109,7 +109,6 @@ const Widget = ({ type }) => {
   let style = isHover
     ? {
         fontSize: "12px",
-        borderBottom: "1px solid transparent",
         width: "max-content",
         backgroundColor: "#2D6675",
         borderRadius: "3px",
@@ -117,12 +116,14 @@ const Widget = ({ type }) => {
         padding: "0 2px",
         color: "white",
         transition: "0.2s all ease-in-out",
+        padding: '2px',
       }
     : {
         fontSize: "12px",
-        borderBottom: "1px solid gray",
         width: "max-content",
         cursor: "pointer",
+        padding: '2px',
+        textDecoration: 'underline'
       };
 
   return (
@@ -149,7 +150,7 @@ const Widget = ({ type }) => {
         <span style={{ fontWeight: "bold", fontSize: "14px", color: "gray" }}>
           {data.title}
         </span>
-        <span style={{ fontSize: "28px", fontWeight: "300" }}>{data.amt}</span>
+        <span style={{ fontSize: "28px", fontWeight: "500" }}>{data.amt}</span>
         <span
           style={style}
           onMouseEnter={() => setIsHover(true)}

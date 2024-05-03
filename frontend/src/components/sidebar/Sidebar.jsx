@@ -8,6 +8,7 @@ import {
   BugReport
 } from "@mui/icons-material";
 import {
+  Box,
   List,
   ListItem,
   ListItemButton,
@@ -23,6 +24,14 @@ import { NavLink } from "react-router-dom";
 import { AppContext } from "../../context/Context";
 import Add from "./Add";
 import { toast } from "react-toastify"
+import lightLogo from "../../images/logoLight.png";
+import darkLogo from "../../images/logoDark.png";
+
+const StyledImg = styled(`img`)({
+  maxHeight: '40px',
+  marginLeft: '20px',
+  marginTop: '20px'
+})
 
 const Sidebar = () => {
   const { mode, setMode } = useContext(AppContext)
@@ -38,7 +47,16 @@ const Sidebar = () => {
   }, [])
 
   return (
-    <Paper position="fixed" gap="20px" pb={0} sx={{ paddingBottom: 0, height: "calc(100vh - 65px)", borderRadius: '0px', display: {xs: 'none', sm: 'block'}, borderRight: "1px solid rgba(255, 255, 255, 0.1)" }}>
+    <Paper position="fixed" gap="20px" pb={0} sx={{ paddingBottom: 0, height: "100%",  borderRadius: '0px', display: {xs: 'none', sm: 'block'}, borderRight: "1px solid rgba(255, 255, 255, 0.1)" }}>
+        {mode === "dark" ? (
+            <StyledImg
+              src={darkLogo}
+            />
+        ) : (
+            <StyledImg
+              src={lightLogo}
+            />
+        )}
       <List pb={0} sx={{ backgroundColor: "background.dark", height: "100%" }}>
         <StyledNavLink to="/">
           <ListItem disablePadding>
