@@ -6,6 +6,7 @@ import { loginFunc, demoFunc } from "./LoginService";
 import { useContext } from "react";
 import { AppContext } from "../../context/Context";
 import { toast } from 'react-toastify'
+import lightLogo from "../../images/logoLight.png";
 
 const Login = () => {
   const { setAuth, setUser } = useContext(AppContext);
@@ -88,44 +89,48 @@ const Login = () => {
           position: 'relative'
         }}
       >
-      <Box sx={{
-        position: 'absolute',
-        width: '100%',
-        height: '100%',
-        top: 0,
-        left: 0,
-        backgroundColor: 'rgba(0,0,0,0.3)',
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
-        flexDirection: 'column',
-      }}>
-      </Box>
+        <Box sx={{
+          position: 'absolute',
+          width: '100%',
+          height: '100%',
+          top: 0,
+          left: 0,
+          backgroundColor: 'rgba(0,0,0,0.3)',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          flexDirection: 'column',
+        }}>
+        </Box>
       </Box>
       <Box
         height="100%"
         display="flex"
-        justifyContent="center"
         alignItems="center"
         flexDirection="column"
+        justifyContent="center"
         gap={3}
         sx={{ width: { xs: "100%", sm: "50%" } }}
       >
-        <Typography variant="h2" textAlign={'center'} fontWeight={800} letterSpacing={3} color={'accent.primary'}>Zappa</Typography>
-        
-        <Typography
-          variant="h4"
-          sx={{ borderBottom: "0.5px solid gray", width: "max-content" }}
-        >
-          Login
-        </Typography>
+        <Box>
+          <img src={lightLogo} />
+          <Typography variant="subtitle2" sx={{textAlign: "right"}}>Project Manager</Typography>
+        </Box>
+
+
         <Box
           p={2}
           display="flex"
           flexDirection="column"
           gap={3}
-          sx={{ width: { xs: "100%", sm: "300px", md: "400px" } }}
+          sx={{ width: { xs: "100%", sm: "300px", md: "400px" }, }}
         >
+          <Typography
+            variant="h4"
+            sx={{ borderBottom: "0.5px solid gray", width: "max-content", alignSelf: 'center' }}
+          >
+            Login
+          </Typography>
           <TextField
             variant="filled"
             name="username"
@@ -168,7 +173,7 @@ const Login = () => {
             >
               Demo
             </Button>
-            
+
           </div>
           <Typography variant="body" sx={{ alignSelf: 'center' }}>Click Demo to login or test Authorization</Typography>
         </Box>
