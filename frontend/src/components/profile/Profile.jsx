@@ -3,6 +3,7 @@ import {
   Avatar,
   Box,
   Button,
+  Divider,
   styled,
   TextField,
   Typography,
@@ -69,13 +70,13 @@ const Profile = () => {
       height="100%"
     >
       <Typography
-        variant="h5"
+        variant="h4"
         mb={2}
-        fontWeight={400}
-        sx={{ borderBottom: "0.5px solid gray", width: "max-content" }}
+        sx={{ width: "max-content" }}
       >
         Profile
       </Typography>
+      <Divider flexItem sx={{color: "rgba(0, 0, 0, 0.1)", marginY: "20px"}} />
       <Box>
         <div
           style={{

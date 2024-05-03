@@ -108,6 +108,7 @@ function App() {
       },
       background: {
         gray: "lightgray",
+        dark: "#1e1e1e",
         offWhite: "#f3f3f3",
       },
       textInput: {
@@ -176,6 +177,7 @@ function App() {
                       width: "100%",
                       minHeight: "100%",
                       maxHeight: { sm: "calc(100vh - 64px)" },
+                      backgroundColor: mode === "dark" ? "#262626" : '#f0f0f0'
                       // bgcolor:
                       //   mode === "dark"
                       //     ? "background.primary"

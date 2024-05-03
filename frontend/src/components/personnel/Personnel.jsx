@@ -1,4 +1,4 @@
-import { Box, Typography } from "@mui/material";
+import { Box, Divider, Typography } from "@mui/material";
 import { useContext } from "react";
 import { AppContext } from "../../context/Context";
 import PersonnelList from "./PersonnelList";
@@ -16,12 +16,12 @@ const Personnel = () => {
     >
       <Typography
         mb={2}
-        fontWeight={400}
-        variant="h6"
-        sx={{ borderBottom: "0.5px solid gray", width: "max-content" }}
+        variant="h4"
+        sx={{ width: "max-content" }}
       >
         Teams
       </Typography>
+      <Divider flexItem sx={{color: "rgba(0, 0, 0, 0.1)", marginY: "20px"}} />
       <PersonnelList mode={mode}  />
     </Box>
   );

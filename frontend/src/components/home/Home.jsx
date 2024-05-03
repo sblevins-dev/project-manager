@@ -77,10 +77,12 @@ const Home = () => {
     <Typography variant="h4" >Hey, {user.firstName}</Typography>
       <Typography variant={"subtitle1"}>Welcome back to your dashboard! </Typography>
     </Box>
-    <Divider flexItem sx={{color: "rgba(0, 0, 0, 0.1)", marginY: "20px"}} />
+    {/* <Divider flexItem sx={{color: "rgba(0, 0, 0, 0.1)", marginY: "20px"}} /> */}
       <Box
         flex={6}
         gap={3}
+        mt={1}
+        mb={2}
         sx={{
           display: "flex",
           justifyContent: 'space-evenly',
@@ -93,12 +95,12 @@ const Home = () => {
         <Widget type="projects" />
         {/* <Divider flexItem orientation="vertical" sx={{color: "rgba(0, 0, 0, 0.1)"}} /> */}
         <Widget type="issues" />
-        {/* <Divider flexItem orientation="vertical"sx={{color: "rgba(0, 0, 0, 0.1)",}} /> */}
+        {/* <Divider flexItem orientation="vertical"sx={{color: "rgba(0, 0, 0, 0.1)"}} /> */}
         <Widget type="tasks" />
         {/* <Divider flexItem orientation="vertical" sx={{color: "rgba(0, 0, 0, 0.1)"}} /> */}
         <Widget type="assigned" />
       </Box>
-      <Divider flexItem sx={{marginY: "20px", color: "rgba(0, 0, 0, 0.1)"}} />
+      {/* <Divider flexItem sx={{marginY: "20px", color: "rgba(0, 0, 0, 0.1)"}} /> */}
       {/* <Box
         gap={3}
         mt={3}
@@ -158,14 +160,15 @@ const Home = () => {
       <Box
         bgcolor={mode === "dark" ? "background.dark" : "background.default"}
         flex={6}
+        p={2}
         borderRadius={1}
         sx={{ margin: { xs: "16px 0", sm: "0" } }}
       >
         <Typography
           mb={2}
-          fontWeight={400}
+          mt={2}
           variant="h6"
-          sx={{ borderBottom: "0.5px solid gray", width: "max-content" }}
+          sx={{ width: "max-content" }}
         >
           Needs Immediate Attention
         </Typography>

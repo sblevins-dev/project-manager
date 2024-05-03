@@ -9,6 +9,7 @@ import {
 } from "@mui/icons-material";
 import {
   Box,
+  Divider,
   List,
   ListItem,
   ListItemButton,
@@ -29,8 +30,6 @@ import darkLogo from "../../images/logoDark.png";
 
 const StyledImg = styled(`img`)({
   maxHeight: '40px',
-  marginLeft: '20px',
-  marginTop: '20px'
 })
 
 const Sidebar = () => {
@@ -47,8 +46,9 @@ const Sidebar = () => {
   }, [])
 
   return (
-    <Paper position="fixed" gap="20px" pb={0} sx={{ paddingBottom: 0, height: "100%",  borderRadius: '0px', display: {xs: 'none', sm: 'block'}, borderRight: "1px solid rgba(255, 255, 255, 0.1)" }}>
-        {mode === "dark" ? (
+    <Paper position="fixed" gap="20px" pb={0} sx={{ backgroundColor: mode === "dark" ? "#121212" : "background.default",  paddingBottom: 0, height: "100%",  borderRadius: '0px', display: {xs: 'none', sm: 'block'}, borderRight: "1px solid rgba(255, 255, 255, 0.1)" }}>
+        <Box pl={2} pt={2} height={'50px'}>
+          {mode === "dark" ? (
             <StyledImg
               src={darkLogo}
             />
@@ -57,7 +57,10 @@ const Sidebar = () => {
               src={lightLogo}
             />
         )}
-      <List pb={0} sx={{ backgroundColor: "background.dark", height: "100%" }}>
+        </Box>
+        
+        <Divider flexItem sx={{color: "rgba(0, 0, 0, 0.1)", marginY: "20px"}} />
+      <List pb={0} sx={{ height: "100%" }}>
         <StyledNavLink to="/">
           <ListItem disablePadding>
             <ListItemButton>

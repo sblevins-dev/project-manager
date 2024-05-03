@@ -1,4 +1,4 @@
-import { Box, Typography } from "@mui/material";
+import { Box, Divider, Typography } from "@mui/material";
 import { useEffect } from "react";
 import { useContext } from "react";
 import { AppContext } from "../../context/Context";
@@ -22,14 +22,15 @@ const Tasks = () => {
       >
         <Typography
           mb={2}
-          variant="h5"
-          fontWeight={400}
-          sx={{ borderBottom: "0.5px solid gray", width: "max-content" }}
+          variant="h4"
+          sx={{ width: "max-content" }}
         >
           Tasks
         </Typography>
+        <Divider flexItem sx={{color: "rgba(0, 0, 0, 0.1)", marginY: "20px"}} />
         <TaskLogs />
       </Box>
+      {/* <Divider flexItem sx={{color: "rgba(0, 0, 0, 0.1)", marginY: "20px"}} /> */}
       <Box
         borderRadius={1}
         p={2}
@@ -44,8 +45,7 @@ const Tasks = () => {
         <Typography
           mb={2}
           variant="h6"
-          fontWeight={400}
-          sx={{ borderBottom: "0.5px solid gray", width: "max-content" }}
+          sx={{ width: "max-content" }}
         >
           Assigned
         </Typography>

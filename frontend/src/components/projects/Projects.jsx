@@ -74,13 +74,13 @@ const Projects = () => {
     >
       <Typography
         mb={2}
-        fontWeight={400}
-        variant="h5"
+        variant="h4"
         // color={"accent.primary"}
-        sx={{ borderBottom: "0.5px solid gray", width: "max-content" }}
+        sx={{ width: "max-content" }}
       >
         Projects
       </Typography>
+      <Divider flexItem sx={{color: "rgba(0, 0, 0, 0.1)", marginY: "20px"}} />
       <Box
         p={0}
         mb={2}
@@ -164,6 +164,7 @@ const Projects = () => {
           <label>Testing</label>
         </span>
       </Box>
+      <Divider flexItem sx={{color: "rgba(0, 0, 0, 0.1)", marginY: "20px"}} />
       <Box
         sx={{
           height: { xs: "70%", sm: "80%" }, width: "100%", "& .gridHeader": mode === "dark" ? { color: "white", bgcolor: "transparent" }

@@ -130,7 +130,8 @@ const Widget = ({ type }) => {
     <Box
       justifyContent="space-between"
       flex={12}
-      p={1}
+      p={2}
+      borderRadius={1}
       bgcolor={mode === "dark" ? "background.dark" : "background.default"}
       sx={{
         display: "flex",
