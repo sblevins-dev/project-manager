@@ -24,6 +24,7 @@ const Bugs = () => {
       <Box
         sx={{
           height: {xs: "90%", sm: "90%"},
+          "& .gridHeader": { color: mode === "dark" ? "white" : "accent.primary" }
         }}
       >
         <BugsList />

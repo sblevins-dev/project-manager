@@ -35,7 +35,7 @@ const HomeList = () => {
   return (
     <Box
       color={mode === "dark" ? "white" : "accent.primary"}
-      sx={{height: '500px'}}
+      sx={{ height: '500px', "& .gridHeader": { color: mode === "dark" ? "white" : "accent.primary" }, }}
     >
       <DataGrid
         rows={filteredList}

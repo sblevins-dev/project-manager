@@ -10,7 +10,7 @@ const Personnel = () => {
     <Box
       p={2}
       bgcolor={mode === "dark" ? "background.dark" : "background.default"}
-      
+      sx={{"& .gridHeader": { color: mode === "dark" ? "white" : "accent.primary" }}}
       gap={3}
       borderRadius={1}
     >
