@@ -155,7 +155,7 @@ function App() {
           >
             <Box sx={{ maxHeight: "100vh", height: '100%', minHeight: '100vh' }}>
               <Router>
-                {/* <Navbar /> */}
+                <Navbar />
                 <Box
                   flexDirection="row"
                   spacing={2}
@@ -163,8 +163,8 @@ function App() {
                   sx={{
                     overflow: 'hidden',
                     display: "flex",
-                    height: "100vh",
-                    minHeight: { xs: "calc(100vh - 56px)", sm: "100%" },
+                    height: "calc(100vh - 64px)",
+                    minHeight: { xs: "calc(100vh - 64px)", sm: "100%" },
                   }}
                 >
                   <Box>

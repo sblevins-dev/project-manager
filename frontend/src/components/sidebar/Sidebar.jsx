@@ -6,11 +6,8 @@ import {
   AccountTree,
   Assignment,
   BugReport,
-  BorderLeft
 } from "@mui/icons-material";
 import {
-  Box,
-  Divider,
   List,
   ListItem,
   ListItemButton,
@@ -28,7 +25,6 @@ import { AppContext } from "../../context/Context";
 import Add from "./Add";
 import { toast } from "react-toastify"
 import { logout } from "../profile/ProfileService";
-import darkLogo from "../../images/logoDark.png";
 import LogoutIcon from '@mui/icons-material/Logout';
 
 const StyledImg = styled(`img`)({
@@ -48,14 +44,14 @@ const Sidebar = () => {
     '&.active': {
       color: theme.palette.accent.primary,
       '& > .listItem': {
-        backgroundColor: 'rgba(255, 255, 255, 0.1)',
+        backgroundColor: 'rgba(150, 150, 150, 0.1)',
       }
     }
   }));
 
   const StyledListBtn = styled(ListItemButton)({
     '&:hover': {
-      backgroundColor: mode === "dark" ? 'default' : '#1b1b1b'
+      backgroundColor: mode === "dark" ? 'default' : 'rgba(250, 250, 250, 0.1)'
     }
   })
 
@@ -70,13 +66,13 @@ const Sidebar = () => {
   }, [])
 
   return (
-    <Paper position="fixed" gap="20px" pb={0} sx={{ backgroundColor: mode === "dark" ? "#121212a" : "black",  paddingBottom: 0, height: "100%",  borderRadius: '0px', display: {xs: 'none', sm: 'block'}, borderRight: "1px solid rgba(255, 255, 255, 0.1)" }}>
-        <Box pl={2} pt={2} height={'70px'} sx={{  borderBottom: "1px solid rgba(255, 255, 255, 0.2)" }}>
+    <Paper position="fixed" gap="20px" pb={0} sx={{ backgroundColor: mode === "dark" ? "#121212a" : "background.dark",  paddingBottom: 0, height: "100%",  borderRadius: '0px', display: {xs: 'none', sm: 'block'}, borderRight: "1px solid rgba(255, 255, 255, 0.1)" }}>
+        {/* <Box pl={2} pt={2} height={'70px'} sx={{  borderBottom: "1px solid rgba(255, 255, 255, 0.2)" }}>
           
             <StyledImg
               src={darkLogo}
             />
-        </Box>
+        </Box> */}
         
         {/* <Divider flexItem sx={{color: mode === "dark" ? "rgba(255, 255, 255, 1)" : "rgba(0, 0, 0, 0.1)", marginY: "20px"}} /> */}
       <List pb={0} sx={{ height: "100%", paddingTop: '10px' }}>
