@@ -63,7 +63,6 @@ const BugComments = ({ bug }) => {
           height: "100%",
           borderRadius: "5px",
           maxHeight: "450px",
-          bgcolor: "background.dark",
           overflowY: "scroll",
         }}
       >

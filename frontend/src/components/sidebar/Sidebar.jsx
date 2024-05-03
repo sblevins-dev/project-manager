@@ -18,6 +18,7 @@ import {
   Paper,
   styled,
   Switch,
+  Typography,
 } from "@mui/material";
 import { useEffect } from "react";
 import { useContext } from "react";
@@ -32,124 +33,130 @@ const StyledImg = styled(`img`)({
   maxHeight: '40px',
 })
 
+
+
 const Sidebar = () => {
   const { mode, setMode } = useContext(AppContext)
 
   const StyledNavLink = styled(NavLink)({
     textDecoration: "none",
     listStyleType: "none",
-    color: mode === "dark" ? "white" : "black",
+    color: "white",
+    
   });
+
+  const StyledListBtn = styled(ListItemButton)({
+    '&:hover': {
+      backgroundColor: mode === "dark" ? 'default' : '#1b1b1b'
+    }
+  })
 
   useEffect(() => {
     toast.success("Welcome", {position: toast.POSITION.BOTTOM_RIGHT})
   }, [])
 
   return (
-    <Paper position="fixed" gap="20px" pb={0} sx={{ backgroundColor: mode === "dark" ? "#121212" : "background.default",  paddingBottom: 0, height: "100%",  borderRadius: '0px', display: {xs: 'none', sm: 'block'}, borderRight: "1px solid rgba(255, 255, 255, 0.1)" }}>
-        <Box pl={2} pt={2} height={'50px'}>
-          {mode === "dark" ? (
+    <Paper position="fixed" gap="20px" pb={0} sx={{ backgroundColor: mode === "dark" ? "#121212a" : "black",  paddingBottom: 0, height: "100%",  borderRadius: '0px', display: {xs: 'none', sm: 'block'}, borderRight: "1px solid rgba(255, 255, 255, 0.1)" }}>
+        <Box pl={2} pt={2} height={'70px'} sx={{  borderBottom: "1px solid rgba(255, 255, 255, 0.2)" }}>
+          
             <StyledImg
               src={darkLogo}
             />
-        ) : (
-            <StyledImg
-              src={lightLogo}
-            />
-        )}
         </Box>
         
-        <Divider flexItem sx={{color: "rgba(0, 0, 0, 0.1)", marginY: "20px"}} />
+        {/* <Divider flexItem sx={{color: mode === "dark" ? "rgba(255, 255, 255, 1)" : "rgba(0, 0, 0, 0.1)", marginY: "20px"}} /> */}
       <List pb={0} sx={{ height: "100%" }}>
         <StyledNavLink to="/">
           <ListItem disablePadding>
-            <ListItemButton>
+            <StyledListBtn>
               <ListItemIcon>
-                <Home sx={{ padding: "2px", color: mode==="dark" ? "white" : "accent.primary", borderRadius: '5px', bgcolor: mode === "dark" ? "accent.primary" : "white" }} />
+                <Home sx={{ padding: "2px", color: "accent.primary", borderRadius: '5px',  }} />
               </ListItemIcon>
               <ListItemText primary="Homepage" />
-            </ListItemButton>
+            </StyledListBtn>
           </ListItem>
         </StyledNavLink>
 
         <StyledNavLink to="/projects">
           <ListItem disablePadding>
-            <ListItemButton>
+            <StyledListBtn>
               <ListItemIcon>
-                <AccountTree sx={{ padding: "2px", color: mode==="dark" ? "white" : "accent.primary", borderRadius: '5px', bgcolor: mode === "dark" ? "accent.primary" : "white" }} />
+                <AccountTree sx={{ padding: "2px", color: "accent.primary", borderRadius: '5px',  }} />
               </ListItemIcon>
               <ListItemText primary="Projects" />
-            </ListItemButton>
+            </StyledListBtn>
           </ListItem>
         </StyledNavLink>
 
         <StyledNavLink to="/bugs">
           <ListItem disablePadding>
-            <ListItemButton>
+            <StyledListBtn>
               <ListItemIcon>
-                <BugReport sx={{ padding: "2px", color: mode==="dark" ? "white" : "accent.primary", borderRadius: '5px', bgcolor: mode === "dark" ? "accent.primary" : "white" }} />
+                <BugReport sx={{ padding: "2px", color: "accent.primary", borderRadius: '5px',  }} />
               </ListItemIcon>
               <ListItemText primary="Issues" />
-            </ListItemButton>
+            </StyledListBtn>
           </ListItem>
         </StyledNavLink>
 
         <StyledNavLink to="/tasks">
           <ListItem disablePadding>
-            <ListItemButton>
+            <StyledListBtn>
               <ListItemIcon>
-                <Assignment sx={{ padding: "2px", color: mode==="dark" ? "white" : "accent.primary", borderRadius: '5px', bgcolor: mode === "dark" ? "accent.primary" : "white" }} />
+                <Assignment sx={{ padding: "2px", color: "accent.primary", borderRadius: '5px',  }} />
               </ListItemIcon>
               <ListItemText primary="Tasks" />
-            </ListItemButton>
+            </StyledListBtn>
           </ListItem>
         </StyledNavLink>
 
         <StyledNavLink to="/personnel">
           <ListItem disablePadding>
-            <ListItemButton>
+            <StyledListBtn>
               <ListItemIcon>
-                <Group sx={{ padding: "2px", color: mode==="dark" ? "white" : "accent.primary", borderRadius: '5px', bgcolor: mode === "dark" ? "accent.primary" : "white" }} />
+                <Group sx={{ padding: "2px", color: "accent.primary", borderRadius: '5px',  }} />
               </ListItemIcon>
               <ListItemText primary="Personnel" />
-            </ListItemButton>
+            </StyledListBtn>
           </ListItem>
         </StyledNavLink>
 
         {/* <StyledNavLink to="/settings">
           <ListItem disablePadding>
-            <ListItemButton>
+            <StyledListBtn>
               <ListItemIcon>
-                <Settings sx={{ padding: "2px", color: mode==="dark" ? "white" : "accent.primary", borderRadius: '5px', bgcolor: mode === "dark" ? "accent.primary" : "white" }} />
+                <Settings sx={{ padding: "2px", color: "accent.primary", borderRadius: '5px',  }} />
               </ListItemIcon>
               <ListItemText primary="Settings" />
-            </ListItemButton>
+            </StyledListBtn>
           </ListItem>
         </StyledNavLink> */}
 
         <StyledNavLink to="/profile">
           <ListItem disablePadding>
-            <ListItemButton>
+            <StyledListBtn>
               <ListItemIcon>
-                <AccountBox sx={{ padding: "2px", color: mode==="dark" ? "white" : "accent.primary", borderRadius: '5px', bgcolor: mode === "dark" ? "accent.primary" : "white" }} />
+                <AccountBox sx={{ padding: "2px", color: "accent.primary", borderRadius: '5px',  }} />
               </ListItemIcon>
               <ListItemText primary="Profile" />
-            </ListItemButton>
+            </StyledListBtn>
           </ListItem>
         </StyledNavLink>
 
         <ListItem disablePadding>
-          <ListItemButton>
+          <StyledListBtn>
             <ListItemIcon>
-              <ModeNight sx={{ padding: "2px", color: mode==="dark" ? "white" : "accent.primary", borderRadius: '5px', bgcolor: mode === "dark" ? "accent.primary" : "white" }} />
+              <ModeNight sx={{ padding: "2px", color: "accent.primary", borderRadius: '5px',  }} />
             </ListItemIcon>
             <Switch
               onChange={(e) => setMode(mode === "light" ? "dark" : "light")}
             />
-          </ListItemButton>
+          </StyledListBtn>
         </ListItem>
       </List>
-      <Add />
+        <Typography variant="h6" sx={{color: "white", position: 'fixed', bottom: 80, left: 50}}>Add Bug</Typography>
+        <Add />
+      
     </Paper>
   );
 };

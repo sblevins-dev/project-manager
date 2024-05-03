@@ -49,7 +49,6 @@ const TaskModal = ({
       >
         <Box
           p={2}
-          bgcolor={"background.dark"}
           borderRadius={1}
           boxShadow={0}
           sx={{ position: "relative", width: "100%", height: "100%" }}
