@@ -35,7 +35,11 @@ const HomeList = () => {
   return (
     <Box
       color={mode === "dark" ? "white" : "accent.primary"}
-      sx={{ height: '500px', "& .gridHeader": { color: mode === "dark" ? "white" : "accent.primary" }, }}
+      sx={{
+        height: '500px', "& .gridHeader": { color: mode === "dark" ? "white" : "accent.primary" }, '& .MuiDataGrid-root': {
+          borderRight: 'none', borderLeft: 'none', borderTop: 'none', borderRadius: '0'
+        },
+      }}
     >
       <DataGrid
         rows={filteredList}

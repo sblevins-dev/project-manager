@@ -24,7 +24,9 @@ const Bugs = () => {
       <Box
         sx={{
           height: {xs: "90%", sm: "90%"},
-          "& .gridHeader": { color: mode === "dark" ? "white" : "accent.primary" }
+          "& .gridHeader": { color: mode === "dark" ? "white" : "accent.primary" }, '& .MuiDataGrid-root': {
+            borderRight: 'none', borderLeft: 'none', borderTop: 'none', borderRadius: '0'
+          },
         }}
       >
         <BugsList />

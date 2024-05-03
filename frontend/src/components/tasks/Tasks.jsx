@@ -7,7 +7,7 @@ import TaskLogs from "./TaskLogs";
 
 const Tasks = () => {
   const { mode, user } = useContext(AppContext);
-  useEffect(() => {}, [user]);
+  useEffect(() => { }, [user]);
 
   return (
     <Box display="flex" gap={2} flexDirection="column">
@@ -17,7 +17,7 @@ const Tasks = () => {
         sx={{
           bgcolor: mode === "dark" ? "background.dark" : "background.default",
           "& .gridHeader": mode === "dark" ? { color: "white", bgcolor: "transparent" }
-            : { color: "accent.primary", bgcolor: "transparent"},
+            : { color: "accent.primary", bgcolor: "transparent" },
         }}
       >
         <Typography
@@ -36,7 +36,9 @@ const Tasks = () => {
         sx={{
           bgcolor: mode === "dark" ? "background.dark" : "background.default",
           "& .gridHeader": mode === "dark" ? { color: "white", bgcolor: "transparent" }
-            : { color: "accent.primary", bgcolor: "transparent"},
+            : { color: "accent.primary", bgcolor: "transparent" }, '& .MuiDataGrid-root': {
+              borderRight: 'none', borderLeft: 'none', borderTop: 'none', borderRadius: '0'
+            },
         }}
       >
         <Typography
@@ -51,7 +53,7 @@ const Tasks = () => {
           <Assigned />
         </Box>
       </Box>
-      <Box sx={{display: {xs: 'none', sm: 'inline'}, color: "transparent"}}>H</Box>
+      <Box sx={{ display: { xs: 'none', sm: 'inline' }, color: "transparent" }}>H</Box>
     </Box>
   );
 };

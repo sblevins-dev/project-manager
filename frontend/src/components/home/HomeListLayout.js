@@ -25,16 +25,24 @@ export const columns = [
             minWidth: "73px",
             textAlign: "center",
             fontSize: ".8rem",
-            fontWeight: "600",
-            textTransform: "uppercase",
             letterSpacing: "2px",
-            padding: "5px 0",
+            padding: "5px 10px",
             borderRadius: "5px",
+            backgroundColor:
+            cellValues.value === 4
+            ? "#ffebeb"
+            : cellValues.value === 3
+            ? "#fff3df"
+            : cellValues.value === 2
+            ? "#fdffcc"
+            : cellValues.value === 1
+            ? "#edffeb"
+            : "transparent",
             color:
             cellValues.value === 4
-            ? "#ff2800"
+            ? "#ff0000"
             : cellValues.value === 3
-            ? "#ffae04"
+            ? "#cc9f00"
             : cellValues.value === 2
             ? "#a0a500"
             : cellValues.value === 1
@@ -43,13 +51,13 @@ export const columns = [
           }}
         >
           {cellValues.value === 4
-            ? "Critical"
+            ? "critical"
             : cellValues.value === 3
-            ? "Major"
+            ? "major"
             : cellValues.value === 2
-            ? "Minor"
+            ? "minor"
             : cellValues.value === 1
-            ? "Low"
+            ? "low"
             : null}
         </div>
       );

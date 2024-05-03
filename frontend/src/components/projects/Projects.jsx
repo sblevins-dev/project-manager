@@ -35,13 +35,13 @@ const Projects = () => {
       } else if (proj.stage === "Planning") {
         planning += 1
       }
-       else if (proj.stage === "Designing") {
+      else if (proj.stage === "Designing") {
         designing += 1
       }
-       else if (proj.stage === "Building") {
+      else if (proj.stage === "Building") {
         building += 1
       }
-       else if (proj.stage === "Testing") {
+      else if (proj.stage === "Testing") {
         testing += 1
       }
     })
@@ -103,7 +103,7 @@ const Projects = () => {
           <span style={{ fontWeight: "bold" }}>{projList.length}</span>
           <label>Projects</label>
         </span>
-        <Divider flexItem orientation="vertical" sx={{color: "rgba(0, 0, 0, 0.1)"}} />
+        <Divider flexItem orientation="vertical" sx={{ color: "rgba(0, 0, 0, 0.1)" }} />
         <span
           style={{
             display: "flex",
@@ -115,7 +115,7 @@ const Projects = () => {
           <span style={{ fontWeight: "bold" }}>{data.defining}</span>
           <label>Defining</label>
         </span>
-        <Divider flexItem orientation="vertical" sx={{color: "rgba(0, 0, 0, 0.1)"}} />
+        <Divider flexItem orientation="vertical" sx={{ color: "rgba(0, 0, 0, 0.1)" }} />
         <span
           style={{
             display: "flex",
@@ -127,7 +127,7 @@ const Projects = () => {
           <span style={{ fontWeight: "bold" }}>{data.planning}</span>
           <label>Planning</label>
         </span>
-        <Divider flexItem orientation="vertical" sx={{color: "rgba(0, 0, 0, 0.1)"}} />
+        <Divider flexItem orientation="vertical" sx={{ color: "rgba(0, 0, 0, 0.1)" }} />
         <span
           style={{
             display: "flex",
@@ -139,7 +139,7 @@ const Projects = () => {
           <span style={{ fontWeight: "bold" }}>{data.designing}</span>
           <label>Desigining</label>
         </span>
-        <Divider flexItem orientation="vertical" sx={{color: "rgba(0, 0, 0, 0.1)"}} />
+        <Divider flexItem orientation="vertical" sx={{ color: "rgba(0, 0, 0, 0.1)" }} />
         <span
           style={{
             display: "flex",
@@ -151,7 +151,7 @@ const Projects = () => {
           <span style={{ fontWeight: "bold" }}>{data.building}</span>
           <label>Building</label>
         </span>
-        <Divider flexItem orientation="vertical" sx={{color: "rgba(0, 0, 0, 0.1)"}} />
+        <Divider flexItem orientation="vertical" sx={{ color: "rgba(0, 0, 0, 0.1)" }} />
         <span
           style={{
             display: "flex",
@@ -165,8 +165,12 @@ const Projects = () => {
         </span>
       </Box>
       <Box
-        sx={{ height: {xs: "70%", sm: "80%"}, width: "100%", "& .gridHeader": mode === "dark" ? { color: "white", bgcolor: "transparent" }
-        : { color: "accent.primary", bgcolor: "transparent"} }}
+        sx={{
+          height: { xs: "70%", sm: "80%" }, width: "100%", "& .gridHeader": mode === "dark" ? { color: "white", bgcolor: "transparent" }
+            : { color: "accent.primary", bgcolor: "transparent" }, '& .MuiDataGrid-root': {
+              borderRight: 'none', borderLeft: 'none', borderTop: 'none', borderRadius: '0'
+            },
+        }}
       >
         <DataGrid
           rows={projList}
