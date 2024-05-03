@@ -58,7 +58,6 @@ const ProjCommentList = ({ state }) => {
           height: "85%",
           borderRadius: "5px",
           maxHeight: "450px",
-          bgcolor: "background.dark",
           overflowY: "scroll",
         }}
       >

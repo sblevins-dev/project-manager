@@ -22,17 +22,30 @@ const BugDetails = ({ bug }) => {
   };
 
   const priorityStyles = {
-    minWidth: "100px",
-    color:
-      priority === 4
-        ? "#ff2800"
-        : priority === 3
-        ? "#ffae04"
-        : priority === 2
-        ? "#a0a500"
-        : priority === 1
-        ? "#006a13"
-        : "transparent",
+    paddingLeft: '10px',
+    paddingRight: '10px',
+    borderRadius: '2px',
+    textAlign: 'center',
+    backgroundColor:
+            priority === 4
+            ? "#ffebeb"
+            : priority === 3
+            ? "#fff3df"
+            : priority === 2
+            ? "#fdffcc"
+            : priority === 1
+            ? "#edffeb"
+            : "transparent",
+            color:
+            priority === 4
+            ? "#ff0000"
+            : priority === 3
+            ? "#cc9f00"
+            : priority === 2
+            ? "#a0a500"
+            : priority === 1
+            ? "#006a13"
+            : "transparent",
     fontWeight: "bold"
   };
 
@@ -98,13 +111,13 @@ const BugDetails = ({ bug }) => {
             </label>
             <span style={priorityStyles}>
               {bug.priority === 4
-                ? "CRITICAL"
+                ? "critical"
                 : bug.priority === 3
-                ? "MAJOR"
+                ? "major"
                 : bug.priority === 2
-                ? "MINOR"
+                ? "minor"
                 : bug.priority === 1
-                ? "LOW"
+                ? "low"
                 : ""}
             </span>
           </StyledDiv>
