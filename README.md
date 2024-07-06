@@ -1,33 +1,60 @@
-# Bug Tracker
+## Project Bug Tracker
 
-Live version: https://bug-tracker-react-node.herokuapp.com/
+### Overview
+Project Bug Tracker is a full-stack web application built using the MERN (MongoDB, Express.js, React.js, Node.js) stack. It serves as a platform for managing projects, issues, and tasks within teams. Users can create projects, report bugs, assign tasks, and collaborate effectively through a centralized interface. The application supports authentication for secure user access and features a customizable light and dark mode toggle for improved user experience.
 
-Simple bug tracking software to keep track of important issues. Personnell can share information to a database.
+### Features
+- Authentication: Secure login and registration system.
+- Project Management: Create, view, and manage projects.
+- Issue Tracking: Report bugs and track issues associated with each project.
+- Task Assignment: Assign tasks to team members within projects.
+- User Profiles: View and update user profiles and roles.
+- Light and Dark Mode: Customizable theme preferences for enhanced usability.
 
-You can start out by using the demo login
+### Technologies Used
+- Frontend:
+  - React.js
+  - React Router (for navigation)
+  - Material-UI (for UI components)
+  - Axios (for HTTP requests)
+  - Context API (for theme and state management).
+- Backend:
+  - Node.js
+  - Express.js
+  - MongoDB (Atlas for cloud database)
+  - Mongoose (ODM for MongoDB)
+  - JWT (JSON Web Tokens for authentication)
+  - bcrypt (for password hashing).
+- Deployment:
+  - Heroku (for backend and frontend deployment)
+ 
+### Installation
+To run this project locally, follow these steps:
 
-<img src="https://github.com/sblevins-dev/bugTracker/assets/61333980/5444a221-b31d-41fa-92dc-b3da007dfd0c" width="600" />
+1. Clone the repository:
+   ``` bash
+      git clone https://github.com/your_username/bug-tracker.git
+      cd bug-tracker
+   ```
 
-Homepage
+2. Install dependencies:
+   ``` bash
+     npm install
+     cd frontend
+     npm install
+   ```
 
-<img src="https://github.com/sblevins-dev/bugTracker/assets/61333980/f809a646-502a-4b8b-9d44-f2d56e354532" width="600" />
+3. Setup environment variables:
+   - Create a .env file in the root directory and add your MongoDB connection URI, JWT secret, and other necessary variables.
+  
+4. Startup the development server:
+   - Uses concurrently to run backend and frontend at the sametime
+   ``` bash
+     npm run dev
+   ```
 
-Company Personell
-
-<img src="https://github.com/sblevins-dev/bugTracker/assets/61333980/bce12662-ea47-4490-a819-d5f3f70da80a" width="600" />
-
-Update Profile
-
-<img src="https://github.com/sblevins-dev/bugTracker/assets/61333980/f7a3bc1d-8e62-4f2a-80e6-2eefc3434ef5" width="600" />
-
-Create a Bug
-
-<img src="https://github.com/sblevins-dev/bugTracker/assets/61333980/b7e8766b-7a46-4fc4-8981-bce0d7d3d613" width="600" />
-
-
-Dark Mode
-
-<img src="https://github.com/sblevins-dev/bugTracker/assets/61333980/a754575e-d08d-46c7-8509-03cc5e664d70" width="600" />
-
-Thank you for visiting my application. If you have anything to add please let me know!
-
+5. If it does not open automatically:
+   - Open your browser and visit http://localhost:3000 to view the application.
+  
+### Contributions
+  - Contributions are welcome! Please fork the repository and create a pull request with your improvements.
