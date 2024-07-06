@@ -51,6 +51,11 @@ const HomeList = () => {
         disableColumnSelector={true}
         columnBuffer={2}
         onRowClick={(e) => handleBugClick(e.row)}
+        sx={{
+          '& .MuiDataGrid-row:hover': {
+              cursor: 'pointer',
+          },
+      }}
       />
     </Box>
   );

@@ -182,6 +182,11 @@ const Projects = () => {
           disableColumnSelector={true}
           disableSelectionOnClick={true}
           onRowClick={(e) => handleProjClick(e.row)}
+          sx={{
+            '& .MuiDataGrid-row:hover': {
+                cursor: 'pointer',
+            },
+        }}
         />
       </Box>
     </Box>

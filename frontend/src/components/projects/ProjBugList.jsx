@@ -48,6 +48,9 @@ const ProjBugList = ({ state, filteredList }) => {
             "&.MuiDataGrid-root--densityStandard .MuiDataGrid-cell": {
               py: "20px",
             },
+            '& .MuiDataGrid-row:hover': {
+                cursor: 'pointer',
+            },
           }}
           getRowHeight={() => "auto"}
           getEstimatedRowHeight={() => 200}

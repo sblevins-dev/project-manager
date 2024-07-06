@@ -27,12 +27,6 @@ import { toast } from "react-toastify"
 import { logout } from "../profile/ProfileService";
 import LogoutIcon from '@mui/icons-material/Logout';
 
-const StyledImg = styled(`img`)({
-  maxHeight: '40px',
-})
-
-
-
 const Sidebar = () => {
   const { mode, setMode, setAuth } = useContext(AppContext)
   const navigate = useNavigate();

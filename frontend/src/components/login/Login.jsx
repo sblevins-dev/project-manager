@@ -113,7 +113,7 @@ const Login = () => {
         sx={{ width: { xs: "100%", sm: "50%" } }}
       >
         <Box>
-          <img src={lightLogo} />
+          <img src={lightLogo} alt="light-logo" />
           <Typography variant="subtitle2" sx={{textAlign: "right"}}>Project Manager</Typography>
         </Box>
 
@@ -122,15 +122,9 @@ const Login = () => {
           p={2}
           display="flex"
           flexDirection="column"
-          gap={3}
+          gap={4}
           sx={{ width: { xs: "100%", sm: "300px", md: "400px" }, }}
         >
-          <Typography
-            variant="h4"
-            sx={{ borderBottom: "0.5px solid gray", width: "max-content", alignSelf: 'center' }}
-          >
-            Login
-          </Typography>
           <TextField
             variant="filled"
             name="username"
@@ -159,7 +153,7 @@ const Login = () => {
               }}
               onClick={handleLogin}
             >
-              Submit
+              Login
             </Button>
             <Button
               sx={{
@@ -175,7 +169,7 @@ const Login = () => {
             </Button>
 
           </div>
-          <Typography variant="body" sx={{ alignSelf: 'center' }}>Click Demo to login or test Authorization</Typography>
+          <Typography variant="subtitle1" sx={{ alignSelf: 'center' }}>Click Demo to login or test Authorization</Typography>
         </Box>
       </Box>
     </Paper>
